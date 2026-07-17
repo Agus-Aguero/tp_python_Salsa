@@ -65,7 +65,8 @@ if archivo_subido is not None:
             
             # API de Hugging Face (Usamos Mistral, un modelo abierto y sin restricciones)
             API_URL = "https://router.huggingface.co/hf-inference/models/HuggingFaceH4/zephyr-7b-beta"
-            headers = {"Authorization": f"Bearer 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"}
+            token = st.secrets["HF_TOKEN"]
+            headers = {"Authorization": f"Bearer {token}"}
             
             payload = {
                 "inputs": prompt,

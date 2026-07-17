@@ -64,7 +64,7 @@ if archivo_subido is not None:
         with st.spinner("Pensando la receta..."):
             
             # API de Hugging Face (Usamos Mistral, un modelo abierto y sin restricciones)
-            API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
+            API_URL = "https://router.huggingface.co/hf-inference/models/Qwen/Qwen2.5-1.5B-Instruct"
             token = st.secrets["HF_TOKEN"]
             headers = {"Authorization": f"Bearer {token}"}
             
